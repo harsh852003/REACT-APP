@@ -8,8 +8,7 @@ export default function TextForm(props) {
         props.showAlert("Converted into Uppercase","success")
     }
     const handleChange = (event) => {
-        setText(event.target.value)
-       
+        setText(event.target.value)  
     }
     const handleOnClick = () => {
         let newText = text.toLowerCase()
@@ -25,7 +24,6 @@ export default function TextForm(props) {
         setText(newText.join(" "))
         props.showAlert("Extra Space Removed", "success")
     }
-
     return (
         <>
             <div className="container" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
@@ -40,7 +38,7 @@ export default function TextForm(props) {
                 <button className="btn btn-success mx-3" onClick={handleExtraSpaces}>Remove Extra Spacet</button>
             </div>
             <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-                <h2>Your Text Summary</h2>
+                <h2>Text Summary</h2>
                 <p>no of words - {text.split(" ").length}</p>
                 <p>no of character- {text.length}</p>
                 <p>{0.008 * text.split(" ").length} per min read</p>
