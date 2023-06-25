@@ -43,7 +43,7 @@ export default function TextForm(props) {
                 <h2>Your Text Summary</h2>
                 <p>no of words - { text.split(" ").filter((element)=>{return element.length !=0}).length}</p>
                 <p>no of character- {text.length}</p>
-                <p>{0.008 * text.split(" ").length} per min read</p>
+                <p>{0.008 * text.split(" ").length} per min</p>
                 <h2>Preview</h2>
                 <p>{text.length > 0 ? text : "Plaese rite something to preview"}</p>
             </div>
